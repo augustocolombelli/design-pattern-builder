@@ -1,13 +1,14 @@
 ### Builder Design Pattern
 Simple example using Builder Design Pattern.
 
-#### How can this Design Pattern can help us?
+#### How this Design Pattern can help us?
 Using this pattern, we can create classes responsible for creating other classes that have some complexity. For example, it is very useful in unit testing when you need to instantiate many objects with many attributes. You can create cleaner unit tests.
 
 #### Two ways to create Builders
 In our example, we create two Builders, EntityBuilderOne and EntityBuilderTwo. The objective of this Builder is the same, but we have some differences in the format that objects are created. 
 
 In the first way, we have all of attributes in the class Builder. It is necessary to set his values in a method. In our example, we are doing this in the method build().
+
 ```
 public class EntityBuilderOne {
 
