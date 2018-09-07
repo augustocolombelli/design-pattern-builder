@@ -14,7 +14,9 @@ public class EntityBuilderOne {
 
  private int identification;
  private double total;
+ 
  //...
+ 
  public Entity build() {
    Entity entity = new Entity();
    entity.setIdentification(identification);
@@ -26,6 +28,7 @@ public class EntityBuilderOne {
    this.identification = identification;
    return this;
  }
+ 
 //...
 }
 ```
@@ -37,20 +40,21 @@ public class EntityBuilderTwo {
 
 private Entity entity;
 
-	public Entity build() {
-		return entity;
-	}
+  public Entity build() {
+    return entity;
+  }
 	
-	public static EntityBuilderTwo oneEntity() {
-		EntityBuilderTwo builder = new EntityBuilderTwo();
-		builder.entity = new Entity();
-		return builder;
-	}
+  public static EntityBuilderTwo oneEntity() {
+    EntityBuilderTwo builder = new EntityBuilderTwo();
+    builder.entity = new Entity();
+    return builder;
+  }
 
-	public EntityBuilderTwo withIdentification(Integer identification) {
-		entity.setIdentification(identification);
-		return this;
-	}
-	//...
+  public EntityBuilderTwo withIdentification(Integer identification) {
+    entity.setIdentification(identification);
+    return this;
+  }
+  
+   //...
 }
 ```
